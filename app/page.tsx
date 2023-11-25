@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import HeroImg from 'public/hero.png';
+import Button from './components/shared/Button';
 
 export default function Home() {
 	return (
@@ -12,9 +13,7 @@ export default function Home() {
 					Turning your Idea into Reality. We bring together the teams from the
 					global tech industry.
 				</p>
-				<button className='w-fit rounded-md bg-[#53c28b] p-[20px] text-white'>
-					See Our Works
-				</button>
+				<Button name='See our works' url='/portfolio' />
 			</div>
 
 			<div className=''>
