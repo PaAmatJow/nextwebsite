@@ -4,6 +4,7 @@ import './globals.css'
 import React from 'react'
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
+import { ThemeProvider } from './context/ThemeContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,12 +22,13 @@ export default function RootLayout({
     <html lang="en">
       
       <body className={inter.className}>
+        <ThemeProvider>
         <div className="mx-auto flex min-h-[100vh] max-w-[1366px] flex-col justify-between px-[60px]">
           <Navbar />
         {children}
         <Footer />
         </div>
-        
+        </ThemeProvider>
       </body>
       
     </html>

@@ -1,10 +1,10 @@
-import Image from "next/image"
+import Image from 'next/image';
 
 const BlogPosts = () => {
-  return (
+	return (
 		<div>
-			<div className='flex gap-[50px] mb-[50px]'>
-				<div className='flex-1 flex flex-col justify-between'>
+			<div className='mb-[50px] flex gap-[50px]'>
+				<div className='flex flex-1 flex-col justify-between'>
 					<h1 className='text-[32px] font-bold'>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
 						similique?
@@ -27,7 +27,7 @@ const BlogPosts = () => {
 					</div>
 				</div>
 
-				<div className='flex-1 relative h-[300px]'>
+				<div className='relative h-[300px] flex-1'>
 					<Image
 						src='https://images.pexels.com/photos/5558237/pexels-photo-5558237.jpeg'
 						alt=''
@@ -38,7 +38,7 @@ const BlogPosts = () => {
 			</div>
 
 			<div className=''>
-				<p className='text-justify text-[#999] text-[20px]'>
+				<p className='text-justify text-[20px] text-[#999]'>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolorum
 					perferendis quam eligendi, quibusdam minima provident debitis numquam
 					sed qui eum, tempore eius velit ea aperiam quis totam non nulla. Odio,
@@ -66,5 +66,5 @@ const BlogPosts = () => {
 			</div>
 		</div>
 	);
-}
-export default BlogPosts
+};
+export default BlogPosts;

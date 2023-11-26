@@ -8,3 +8,11 @@ html, body {
   background-color: #111;
   color: #bbb
 }
+
+.lightTheme{
+  @apply text-[#111] bg-white
+}
+
+.darkTheme {
+  @apply bg-[#111] text-[#bbb]
+}
