@@ -1,5 +1,8 @@
+'use client'
+
 import Link from 'next/link';
 import DarkModeToggle from '../darkModeToggle/DarkModeToggle';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 const links = [
 	{ id: 1, title: 'Home', url: '/' },
@@ -11,6 +14,8 @@ const links = [
 ];
 
 const Navbar = () => {
+	const session = useSession();
+
 	return (
 		<div className='flex h-[100px] items-center justify-between'>
 			<Link href='/' className='text-[22px] font-bold'>
@@ -28,9 +33,16 @@ const Navbar = () => {
 						</Link>
 					);
 				})}
-				<button className='rounded-md bg-[#53c28b] px-[6px] py-[5px] text-white'>
+				{session.status === 'authenticated' && (<button onClick={() =>signOut()} className='rounded-md bg-[#53c28b] px-[6px] py-[5px] text-white'>
 					Logout
-				</button>
+				</button>)}
+
+				{session.status === 'unauthenticated' && (<button onClick={() =>signIn()} className='rounded-md bg-[#53c28b] px-[6px] py-[5px] text-white'>
+					Login
+				</button>)}
+
+
+				
 			</div>
 		</div>
 	);

@@ -1,5 +1,11 @@
 import Button from '@/app/components/shared/Button';
+import { Metadata } from 'next';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+	title: 'Dev Amat | About',
+	description: 'about page',
+};
 
 const About = () => {
 	return (

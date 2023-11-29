@@ -1,6 +1,12 @@
 // import Image from "next/image"
 // import { useTheme } from '@/app/context/ThemeContext';
+import { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+	title: 'Dev Amat | Portfolio',
+	description: 'portfolio page',
+};
 
 const Portfolio = () => {
 	// const {mode} = useTheme()

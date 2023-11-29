@@ -5,6 +5,8 @@ import React from 'react'
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
 import { ThemeProvider } from './context/ThemeContext'
+import AuthProvider from './components/authProvider/AuthProvider'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,18 +21,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      
-      <body className={inter.className}>
-        <ThemeProvider>
-        <div className="mx-auto flex min-h-[100vh] max-w-[1366px] flex-col justify-between px-[60px]">
-          <Navbar />
-        {children}
-        <Footer />
-        </div>
-        </ThemeProvider>
-      </body>
-      
-    </html>
-  )
+		<html lang='en'>
+			<body className={inter.className}>
+				<ThemeProvider>
+					<AuthProvider>
+						<div className='mx-auto flex min-h-[100vh] max-w-[1366px] flex-col justify-between px-[60px]'>
+							<Navbar />
+							{children}
+							<Footer />
+						</div>
+					</AuthProvider>
+				</ThemeProvider>
+			</body>
+		</html>
+	);
 }

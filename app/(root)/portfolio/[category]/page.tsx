@@ -11,7 +11,7 @@ interface Props {
 	};
 }
 
-const getData = (cat:CategoryType) => {
+const getData = (cat: CategoryType) => {
 	const data = items[cat];
 
 	if (data) {
@@ -20,6 +20,14 @@ const getData = (cat:CategoryType) => {
 
 	return notFound();
 };
+
+// export async function generateMetadata({ params }: { params: Props }) {
+// 	const data = getData(params.category)
+// 	return {
+// 		title: data.title,
+// 	};
+// }
+
 
 const Category = ({ params }: Props) => {
   const data = getData(params.category)
